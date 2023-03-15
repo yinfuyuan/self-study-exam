@@ -52,3 +52,20 @@ SeqList deleteSeqList(SeqList L, int i) {
     L.length--;
     return L;
 }
+
+//SeqList L1;
+//L1.length = 0;
+//L1 = insertSeqList(L1, 10, 1);
+//L1 = insertSeqList(L1, 20, 2);
+//L1 = insertSeqList(L1, 30, 3);
+//L1 = insertSeqList(L1, 40, 4);
+//printf("%d\n", locateSeqList(L1, 30));
+int locateSeqList(SeqList L, int x) {
+    int result = 0;
+    for (int i = 0; i < L.length; i++) {
+        if (L.data[i] == x) {
+            result = i + 1;
+        }
+    }
+    return result;
+}
